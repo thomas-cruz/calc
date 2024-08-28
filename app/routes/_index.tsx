@@ -72,17 +72,17 @@ export default function Index() {
       <div className="m-10 text-gray-500 relative">
         <p>Referred Customers Per Month</p>
         <p className="absolute top-0 right-10">{referredCustomers}</p>
-        <Slider onValueChange={(value)=>setReferredCustomers(value)}></Slider>
+        <Slider min={1}  max={10} onValueChange={(value)=>setReferredCustomers(value)}></Slider>
       </div>
       <div className="m-10 text-gray-500 relative">
         <p>Avg. new projects per month</p>
         <p className="absolute top-0 right-10">{newProjPerMonth}</p>
-        <Slider onValueChange={(value)=>setNewProjPerMonth(value)}></Slider>
+        <Slider min={5} max={50} onValueChange={(value)=>setNewProjPerMonth(value)}></Slider>
       </div>
       <div className="m-10 text-gray-500 relative">
         <p>Avg. existing projects</p>
         <p className="absolute top-0 right-10">{projPerMonth}</p>
-        <Slider onValueChange={(value)=>setProjPerMonth(value)}></Slider>
+        <Slider max={10000} onValueChange={(value)=>setProjPerMonth(value)}></Slider>
       </div>
       </span>
       <span>
